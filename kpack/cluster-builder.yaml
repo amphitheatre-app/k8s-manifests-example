@@ -1,0 +1,32 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuilder
+metadata:
+  name: amp-default-cluster-builder
+spec:
+  tag: wangeguo/amp-default-cluster-builder
+  stack:
+    name: amp-default-cluster-stack
+    kind: ClusterStack
+  store:
+    name: amp-default-cluster-store
+    kind: ClusterStore
+  serviceAccountRef:
+    name: amp-default-builder-service-account
+    namespace: amp-system
+  order:
+  - group:
+    - id: gcr.io/paketo-buildpacks/go
+  - group:
+    - id: gcr.io/paketo-buildpacks/java
+  - group:
+    - id: gcr.io/paketo-buildpacks/nodejs
+  - group:
+    - id: gcr.io/paketo-buildpacks/php
+  - group:
+    - id: gcr.io/paketo-buildpacks/python
+  - group:
+    - id: gcr.io/paketo-buildpacks/ruby
+  - group:
+    - id: docker.io/paketocommunity/rust
+  - group:
+    - id: gcr.io/paketo-buildpacks/dotnet-core
