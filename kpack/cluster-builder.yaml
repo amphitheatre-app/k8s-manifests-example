@@ -3,7 +3,7 @@ kind: ClusterBuilder
 metadata:
   name: amp-default-cluster-builder
 spec:
-  tag: wangeguo/amp-default-cluster-builder
+  tag: <namespace>/amp-default-cluster-builder
   stack:
     name: amp-default-cluster-stack
     kind: ClusterStack
