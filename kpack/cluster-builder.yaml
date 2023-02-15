@@ -15,18 +15,18 @@ spec:
     namespace: amp-system
   order:
   - group:
-    - id: gcr.io/paketo-buildpacks/go
+    - id: paketo-buildpacks/go
   - group:
-    - id: gcr.io/paketo-buildpacks/java
+    - id: paketo-buildpacks/java
   - group:
-    - id: gcr.io/paketo-buildpacks/nodejs
+    - id: paketo-buildpacks/nodejs
   - group:
-    - id: gcr.io/paketo-buildpacks/php
+    - id: paketo-buildpacks/php
   - group:
-    - id: gcr.io/paketo-buildpacks/python
+    - id: paketo-buildpacks/python
   - group:
-    - id: gcr.io/paketo-buildpacks/ruby
+    - id: paketo-buildpacks/ruby
   - group:
-    - id: docker.io/paketocommunity/rust
+    - id: paketo-community/rust
   - group:
-    - id: gcr.io/paketo-buildpacks/dotnet-core
+    - id: paketo-buildpacks/dotnet-core
