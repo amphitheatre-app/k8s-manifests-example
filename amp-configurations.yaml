@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: amp-configurations
+  namespace: amp-system
+data:
+  confgiuration.toml: |
+    [registry."https://index.docker.io/v1/"]
+    username = '<username>'
+    password = '<password>'
+
+    [repositories]
