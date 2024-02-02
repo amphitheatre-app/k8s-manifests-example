@@ -1,0 +1,32 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuilder
+metadata:
+  name: default
+spec:
+  tag: <username>/default-cluster-builder
+  stack:
+    name: default-cluster-stack
+    kind: ClusterStack
+  store:
+    name: default-cluster-store
+    kind: ClusterStore
+  serviceAccountRef:
+    name: amp-controllers
+    namespace: amp-system
+  order:
+  - group:
+    - id: paketo-buildpacks/go
+  - group:
+    - id: paketo-buildpacks/java
+  - group:
+    - id: paketo-buildpacks/nodejs
+  - group:
+    - id: paketo-buildpacks/php
+  - group:
+    - id: paketo-buildpacks/python
+  - group:
+    - id: paketo-buildpacks/ruby
+  - group:
+    - id: paketo-community/rust
+  - group:
+    - id: paketo-buildpacks/dotnet-core
