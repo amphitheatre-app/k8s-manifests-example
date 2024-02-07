@@ -1,7 +1,7 @@
 apiVersion: kpack.io/v1alpha2
 kind: ClusterBuilder
 metadata:
-  name: default
+  name: default-cluster-builder
 spec:
   tag: <username>/default-cluster-builder
   stack:

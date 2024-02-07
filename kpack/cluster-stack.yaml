@@ -3,6 +3,9 @@ kind: ClusterStack
 metadata:
   name: default-cluster-stack
 spec:
+  serviceAccountRef:
+    name: amp-controllers
+    namespace: amp-system
   id: "io.buildpacks.stacks.jammy"
   buildImage:
     image: "paketobuildpacks/build-jammy-base"
